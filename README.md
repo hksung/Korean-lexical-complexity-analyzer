@@ -38,8 +38,8 @@ This package built on two open-source resources:
 ## Index Description
 Detailed descriptions of the indices are available in the following [doc](./doc/Index_description_040926.pdf).
 
-## Quick demo
-This is a quick [demo](https://huggingface.co/spaces/hksung/KLC-demo) - wake it up if it’s asleep.
+## Quick Demo
+This is a quick [demo](https://huggingface.co/spaces/hksung/KLC-demo) - wake it up if it’s asleep (i.e., Click `Restart this Space`)
 
 ## Note
 This package is currently in beta testing. Results may slightly change as the indices and resources continue to be refined. Please use with caution.
