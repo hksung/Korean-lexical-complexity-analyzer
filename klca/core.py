@@ -1539,7 +1539,7 @@ class CompositionalityIndices:
       - Convert each eojeol token into morpheme TokObjects via Normalize._expand_morpheme_units
       - Use TokObject.tag_ (XPOS) to:
           * detect head type (noun vs verb) by tags starting with N or V
-          * count inflectional morphemes (J*, E*)
+          * count functional morphemes (J*, E*)
           * count derivational suffixes (XSA, XSN, XSV)
 
     Indices (Eojeol-level means):
@@ -1548,10 +1548,10 @@ class CompositionalityIndices:
         - NE_MC   : total morphemes in noun-headed eojeols / # noun-headed eojeols
         - VE_MC   : total morphemes in verb-headed eojeols / # verb-headed eojeols
 
-      Inflectional compositionality
-        - AE_IMC : total (J* + E*) / total eojeols
-        - NE_IMC   : total J* in noun-headed eojeols / # noun-headed eojeols
-        - VE_IMC   : total E* in verb-headed eojeols / # verb-headed eojeols
+      Functional morpheme compositionality
+        - AE_FMC : total (J* + E*) / total eojeols
+        - NE_FMC   : total J* in noun-headed eojeols / # noun-headed eojeols
+        - VE_FMC   : total E* in verb-headed eojeols / # verb-headed eojeols
 
     """
 
@@ -1701,13 +1701,13 @@ class CompositionalityIndices:
             self.AE_MC = None
             self.NE_MC = None
             self.VE_MC = None
-            self.AE_IMC = None
-            self.NE_IMC = None
-            self.VE_IMC = None
+            self.AE_FMC = None
+            self.NE_FMC = None
+            self.VE_FMC = None
             self.eojeol_morph_info = []
             self.vald = {
                 "AE_MC": None, "NE_MC": None, "VE_MC": None,
-                "AE_IMC": None, "NE_IMC": None, "VE_IMC": None,
+                "AE_FMC": None, "NE_FMC": None, "VE_FMC": None,
             }
             return
 
@@ -1722,9 +1722,9 @@ class CompositionalityIndices:
         self.VE_MC = self.safe_divide(counts["v_morph_total"], v_e)
 
         # Inflectional compositionality
-        self.AE_IMC = self.safe_divide(counts["all_inf_total"], all_e)
-        self.NE_IMC = self.safe_divide(counts["n_inf_total"], n_e)
-        self.VE_IMC = self.safe_divide(counts["v_inf_total"], v_e)
+        self.AE_FMC = self.safe_divide(counts["all_inf_total"], all_e)
+        self.NE_FMC = self.safe_divide(counts["n_inf_total"], n_e)
+        self.VE_FMC = self.safe_divide(counts["v_inf_total"], v_e)
 
         self.eojeol_morph_info = counts["eojeol_morph_info"]
 
@@ -1732,9 +1732,9 @@ class CompositionalityIndices:
             "AE_MC": self.AE_MC,
             "NE_MC": self.NE_MC,
             "VE_MC": self.VE_MC,
-            "AE_IMC": self.AE_IMC,
-            "NE_IMC": self.NE_IMC,
-            "VE_IMC": self.VE_IMC,
+            "AE_FMC": self.AE_FMC,
+            "NE_FMC": self.NE_FMC,
+            "VE_FMC": self.VE_FMC,
             # optional denominators for diagnostics
             # "eojeols_n": all_e,
             # "N_head_eojeols_n": n_e,

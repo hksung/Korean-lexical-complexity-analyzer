@@ -12,13 +12,13 @@ pip install klca
 	
 ## Usage
 
-Analyze one file:
+Analyze one file (with `txt` extension):
 
 ```bash
 python3 -m klca file --input-file path/to/text.txt --output output.json
 ```
 
-Analyze a folder:
+Analyze multiple texts in a folder:
 
 ```bash
 python3 -m klca folder --input-dir path/to/texts --output results.csv
@@ -26,24 +26,27 @@ python3 -m klca folder --input-dir path/to/texts --output results.csv
 
 - Use `--recursive` to include text files in subfolders. Without it, only files directly inside `--input-dir` are processed.
 
-## Included Resources
+## Included resources
 This package built on two open-source resources:
 - Reference databases (korean-fineweb-edu) for calculating rarity, range, and bigram strength of association
 - Vocabulary grade database (sourced from National Institute of Korean Language), released under Korea Open Government License Type 1
 
-## Morpheme Parsing and Tagging
+## Built-in NLP tool for preprocessing
 - By default, `klca` uses the Korean `stanza` GSD model for tokenization, POS tagging, and lemmatization.
 - The model is downloaded by `stanza` at runtime and is not bundled in this package.
 - If you want to use a different Korean `stanza` model or a custom local model, you can modify the Stanza pipeline settings in the setting (both core.py and batch.py).
 
-## Index Description
-Detailed descriptions of the indices are available in the following [doc](./doc/Index_description_040926.pdf).
+## Index description
+Detailed descriptions of the indices are available in the following [doc](./doc/Index_description.pdf).
 
-## Quick demo
-This is a quick [demo](https://huggingface.co/spaces/hksung/KLC-demo) - wake it up if it’s asleep.
+## Quick Demo
+This is a quick web [demo](https://huggingface.co/spaces/hksung/KLC-demo) - wake it up if it’s asleep (i.e., Click `Restart this Space`)
 
-## Note
-This package is currently in beta testing. Results may slightly change as the indices and resources continue to be refined. Please use with caution.
+## Citation
+For more information about the analyzer, please see the following paper. 
+  * Sung, H., & Shin, G.-H. (*To appear*). Developing and Validating Lexical Complexity Indices for Korean. *Research Methods in Applied Linguistics*.
+  
+If you use the tool in your research, we would greatly appreciate it if you could cite the paper.
 
-## License
-This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+# License
+- This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
