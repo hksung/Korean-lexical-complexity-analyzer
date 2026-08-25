@@ -33,8 +33,7 @@ This package built on two open-source resources:
 
 ## Built-in NLP tool for preprocessing
 - By default, `klca` uses the Korean `stanza` GSD model for tokenization, POS tagging, and lemmatization.
-- The model is downloaded by `stanza` at runtime and is not bundled in this package.
-- If you want to use a different Korean `stanza` model or a custom local model, you can modify the Stanza pipeline settings in the setting (both core.py and batch.py).
+- If you want to use a different Korean `stanza` model or a custom local model, you can modify the pipeline in the setting.
 
 ## Index description
 Detailed descriptions of the indices are available in the following [doc](./doc/Index_description.pdf).
