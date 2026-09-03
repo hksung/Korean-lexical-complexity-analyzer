@@ -43,7 +43,7 @@ This is a quick web [demo](https://huggingface.co/spaces/hksung/KLC-demo) - wake
 
 ## Citation
 For more information about the analyzer, please see the following paper. 
-  * Sung, H., & Shin, G.-H. (*To appear*). Developing and Validating Lexical Complexity Indices for Korean. *Research Methods in Applied Linguistics*.
+  * Sung, H., & Shin, G.-H. (*online first*). [Developing and Validating Lexical Complexity Indices for Korean](https://doi.org/10.1016/j.rmal.2026.100359). *Research Methods in Applied Linguistics*.
   
 If you use the tool in your research, we would greatly appreciate it if you could cite the paper.
 
